@@ -22,7 +22,6 @@ function numerosFormateados(population) {
 }
 
 function mostrarPaises(paises) {
-    // console.log(paises);
     const contenedorPaises = document.querySelector('.paises');
     if (contenedorPaises) {
         paises.forEach(pais => {
@@ -155,7 +154,11 @@ function buscador() {
         search.addEventListener('input', function (e) {
             const valor = e.target.value.toLowerCase();
             const pais = paises.filter(pais => pais.name.toLowerCase().includes(valor));
-            mostrarResultado(pais);
+            if (valor) {
+                mostrarResultado(pais);
+            } else {
+                mostrarPaises(paises);
+            }
         })
     }
 }
