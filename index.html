@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor</title>
+    <link rel="stylesheet" href="/build/css/app.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor header__contenido">
+            <h1 class="header__titulo">Where in the world?</h1>
+            <div class="header__dark-mode">
+                <a href="" id="dark">
+                    <img src="/build/images/moon.svg" alt="" class="header__moon">
+                </a>
+                <p class="header__mode">Dark Mode</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor">
+        <div class="buscador">
+            <input id="buscador" class="buscador__barra" type="text" placeholder="Search for a country">
+            <select name="" id="seleccion" class="buscador__filtro">
+                <option value="">Filter by Region</option>
+                <option value="">Africa</option>
+                <option value="">América</option>
+                <option value="">Asia</option>
+                <option value="">Europe</option>
+                <option value="">Oceanía</option>
+            </select>
+        </div>
+    </div>
+
+    <main class="contenedor">
+        <div class="paises"></div>
+    </main>
+
+
+    <script src="/build/js/app.js"></script>
+</body>
+</html>

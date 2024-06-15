@@ -1,0 +1,7 @@
+gulpfile.js
+*.json
+!data.json
+
+*.md
+src/
+node_modules
