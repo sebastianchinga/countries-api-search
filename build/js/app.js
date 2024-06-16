@@ -72,59 +72,41 @@ async function detallarPais(paises) {
 
     if (pais) {
         const contenedorImagen = document.querySelector('.detalle__imagen');
-        const contenido = document.querySelector('.detalle__informacion');
+        const nombre = document.querySelector('#nombre');
+        const native = document.querySelector('#native');
+        const population = document.querySelector('#population');
+        const region = document.querySelector('#region');
+        const subregion = document.querySelector('#subregion');
+        const capital = document.querySelector('#capital');
+        const domain = document.querySelector('#domain');
+        const currencies = document.querySelector('#curriences');
+        const languages = document.querySelector('#languages');
+        const countries = document.querySelector('.borders');
+        
+        const borders = pais.borders;
 
         // Creando la estructura
         const imagen = document.createElement('IMG');
         imagen.setAttribute('src', `${pais.flag}`);
 
-        const nombre = document.createElement('H2');
         nombre.textContent = pais.name;
+        native.textContent = pais.nativeName;
+        population.textContent = numerosFormateados(pais.population);
+        region.textContent = pais.region;
+        subregion.textContent = pais.subregion;
+        capital.textContent = pais.capital;
+        domain.textContent = pais.topLevelDomain[0];
+        currencies.textContent = pais.currencies[0].name;
 
-        const native = document.createElement('P');
-        native.textContent = '';
-        native.innerHTML = "Native Name: <span>" + `${pais.nativeName}` + "</span>";
-
-        const population = document.createElement('P');
-        population.textContent = '';
-        population.innerHTML = "Population: <span>" + `${numerosFormateados(pais.population)}` + "</span>";
-
-        const region = document.createElement('P');
-        region.textContent = '';
-        region.innerHTML = "Region: <span>" + `${pais.region}` + "</span>";
-
-        const subregion = document.createElement('P');
-        subregion.textContent = '';
-        subregion.innerHTML = "Sub Region: <span>" + `${pais.subregion}` + "</span>";
-
-        const capital = document.createElement('P');
-        capital.textContent = '';
-        capital.innerHTML = "Capital: <span>" + `${pais.capital}` + "</span>";
-
-        const domain = document.createElement('P');
-        domain.textContent = '';
-        domain.innerHTML = "Top Level Domain: <span>" + `${pais.topLevelDomain}` + "</span>";
-
-        const currencies = document.createElement('P');
-        currencies.textContent = '';
-        currencies.innerHTML = "Currencies: <span>" + `${pais.currencies[0].name}` + "</span>";
-
-        const languages = document.createElement('P');
-        languages.textContent = '';
-        languages.innerHTML = "Languages: <span>" + `${pais.languages[0].name}` + "</span>";
+        borders.forEach(border => {
+            const countryCard = document.createElement('P');
+            countryCard.classList.add('border');
+            countryCard.textContent = border;
+            countries.appendChild(countryCard);
+        });
 
         contenedorImagen.appendChild(imagen);
-        contenido.appendChild(nombre);
-        contenido.appendChild(native);
-        contenido.appendChild(population);
-        contenido.appendChild(region);
-        contenido.appendChild(subregion);
-        contenido.appendChild(capital);
-        contenido.appendChild(domain);
-        contenido.appendChild(currencies);
-        contenido.appendChild(languages);
-        // console.log(pais.currencies[0].name);
-        // console.log();
+
     }
 }
 

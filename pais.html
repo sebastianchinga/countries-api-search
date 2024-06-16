@@ -20,7 +20,7 @@
     </header>
 
     <div class="contenedor">
-        <a href="/">Back</a>
+        <a href="/" class="boton">Back</a>
     </div>
 
     <main class="contenedor">
@@ -28,7 +28,25 @@
             <div class="detalle__imagen"></div>  <!-- Imágen del país -->
             <!-- Información del país -->
             <div class="detalle__informacion">
-                
+                <h2 class="detalle__nombre" id="nombre"></h2>
+                <div class="detalles">
+                    <div class="detalles__derecha">
+                        <p class="detalle__native">Native Name: <span id="native"></span></p>
+                        <p class="detalle__population">Population: <span id="population"></span></p>
+                        <p class="detalle__region">Region: <span id="region"></span></p>
+                        <p class="detalle__subregion">Sub Region: <span id="subregion"></span></p>
+                        <p class="detalle__capital">Capital: <span id="capital"></span></p>
+                    </div>
+                    <div class="detalles__izquierda">
+                        <p class="detalle__domain">Top Level Domain: <span id="domain"></span></p>
+                        <p class="detalle__curriences">Curriences: <span id="curriences"></span></p>
+                        <p class="detalle__languages">Languages: <span id="languages"></span></p>
+                    </div>
+                </div>
+                <div class="countries">
+                    <p>Border Countries:</p>
+                    <div class="borders"></div>
+                </div>
             </div>
         </div>
     </main>

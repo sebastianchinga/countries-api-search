@@ -492,3 +492,46 @@ h1 {
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
 }
+.detalle__informacion {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+.detalle__native, .detalle__population, .detalle__region, .detalle__subregion, .detalle__capital, .detalle__domain, .detalle__curriences, .detalle__languages {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.detalle__native span, .detalle__population span, .detalle__region span, .detalle__subregion span, .detalle__capital span, .detalle__domain span, .detalle__curriences span, .detalle__languages span {
+  font-weight: 500;
+}
+
+.countries {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.borders {
+  display: flex;
+  gap: 2rem;
+}
+
+.border {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.detalles {
+  display: flex;
+  gap: 5rem;
+}
+
+.boton {
+  text-decoration: none;
+  color: hsl(200, 15%, 8%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 0.7rem 2rem;
+  border-radius: 0.6rem;
+}
